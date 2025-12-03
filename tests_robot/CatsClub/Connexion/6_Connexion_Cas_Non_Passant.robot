@@ -6,7 +6,7 @@ Metadata         Automation priority          null
 Metadata         Test case importance         Low
 Resource         squash_resources_laure.resource
 #Test Setup       Test Setup
-Test Teardown    Close Browser
+Test Teardown    Close All Browsers
 
 
 *** Test Cases ***
@@ -19,8 +19,6 @@ Connexion Cas Non Passant
     And Je saisis la valeur "pwd" dans l'élément "Mdp"
     And Je clique sur le bouton Connexion
     Then Un message d'erreur s'affiche : "Identifiant et/ou mot de passe incorrect(s)"
-
-    [Teardown]    Test Teardown
 
 *** Keywords ***
 Test Setup

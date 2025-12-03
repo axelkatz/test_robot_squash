@@ -8,7 +8,6 @@ Resource         squash_resources_laure.resource
 #Test Setup       Test Setup
 Test Teardown    Close Browser
 
-
 *** Test Cases ***
 Format du formulaire
     [Documentation]    Format du formulaire

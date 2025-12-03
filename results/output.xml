@@ -1,130 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20251203 14:31:36.762" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20251203 14:48:07.725" rpa="false" schemaversion="3">
 <suite id="s1" name="Test Robot Squash" source="C:\Users\Formation\Documents\test_robot_squash">
 <suite id="s1-s1" name="Tests Robot" source="C:\Users\Formation\Documents\test_robot_squash\tests_robot">
 <suite id="s1-s1-s1" name="CatsClub" source="C:\Users\Formation\Documents\test_robot_squash\tests_robot\CatsClub">
 <suite id="s1-s1-s1-s1" name="Connexion" source="C:\Users\Formation\Documents\test_robot_squash\tests_robot\CatsClub\Connexion">
 <suite id="s1-s1-s1-s1-s1" name="6 Connexion Cas Non Passant" source="C:\Users\Formation\Documents\test_robot_squash\tests_robot\CatsClub\Connexion\6_Connexion_Cas_Non_Passant.robot">
 <test id="s1-s1-s1-s1-s1-t1" name="Connexion Cas Non Passant" line="13">
-<kw name="Test Setup" type="SETUP">
-<doc>test setup
-You can define the ${TEST_SETUP} variable with a keyword for setting up all your tests.
-You can define the ${TEST_6_SETUP} variable with a keyword for setting up this specific test.
-If both are defined, ${TEST_6_SETUP} will be run after ${TEST_SETUP}.</doc>
-<kw name="Get Variable Value" library="BuiltIn">
-<var>${TEST_SETUP_VALUE}</var>
-<arg>${TEST_SETUP}</arg>
-<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
-<msg timestamp="20251203 14:31:36.978" level="INFO">${TEST_SETUP_VALUE} = None</msg>
-<status status="PASS" starttime="20251203 14:31:36.978" endtime="20251203 14:31:36.978"/>
-</kw>
-<kw name="Get Variable Value" library="BuiltIn">
-<var>${TEST_6_SETUP_VALUE}</var>
-<arg>${TEST_6_SETUP}</arg>
-<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
-<msg timestamp="20251203 14:31:36.978" level="INFO">${TEST_6_SETUP_VALUE} = None</msg>
-<status status="PASS" starttime="20251203 14:31:36.978" endtime="20251203 14:31:36.978"/>
-</kw>
-<if>
-<branch type="IF" condition="$TEST_SETUP_VALUE is not None">
-<kw name="Run Keyword" library="BuiltIn">
-<arg>${TEST_SETUP}</arg>
-<doc>Executes the given keyword with the given arguments.</doc>
-<status status="NOT RUN" starttime="20251203 14:31:36.978" endtime="20251203 14:31:36.978"/>
-</kw>
-<status status="NOT RUN" starttime="20251203 14:31:36.978" endtime="20251203 14:31:36.978"/>
-</branch>
-<status status="PASS" starttime="20251203 14:31:36.978" endtime="20251203 14:31:36.978"/>
-</if>
-<if>
-<branch type="IF" condition="$TEST_6_SETUP_VALUE is not None">
-<kw name="Run Keyword" library="BuiltIn">
-<arg>${TEST_6_SETUP}</arg>
-<doc>Executes the given keyword with the given arguments.</doc>
-<status status="NOT RUN" starttime="20251203 14:31:36.978" endtime="20251203 14:31:36.978"/>
-</kw>
-<status status="NOT RUN" starttime="20251203 14:31:36.978" endtime="20251203 14:31:36.978"/>
-</branch>
-<status status="PASS" starttime="20251203 14:31:36.978" endtime="20251203 14:31:36.978"/>
-</if>
-<status status="PASS" starttime="20251203 14:31:36.978" endtime="20251203 14:31:36.978"/>
-</kw>
-<kw name="Given Je suis sur la page de CatsClub" library="squash_resources">
+<kw name="Given Je suis sur la page de CatsClub" library="squash_resources_laure">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20251203 14:31:36.994" level="INFO">Opening browser 'firefox' to base url 'http://localhost:8080/index.html'.</msg>
-<msg timestamp="20251203 14:31:36.995" level="INFO">Firefox driver log is always forced to to: C:\Users\Formation\Documents\test_robot_squash\results\geckodriver-5.log</msg>
-<status status="PASS" starttime="20251203 14:31:36.993" endtime="20251203 14:31:42.173"/>
+<msg timestamp="20251203 14:48:07.944" level="INFO">Opening browser 'firefox' to base url 'http://localhost:8080'.</msg>
+<msg timestamp="20251203 14:48:07.946" level="INFO">Firefox driver log is always forced to to: C:\Users\Formation\Documents\test_robot_squash\results\geckodriver-7.log</msg>
+<status status="PASS" starttime="20251203 14:48:07.944" endtime="20251203 14:48:13.146"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20251203 14:48:13.146" endtime="20251203 14:48:13.425"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20251203 14:31:44.189" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20251203 14:31:42.177" endtime="20251203 14:31:44.189"/>
+<msg timestamp="20251203 14:48:15.429" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20251203 14:48:13.425" endtime="20251203 14:48:15.429"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Cats Club</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20251203 14:31:44.209" level="INFO">Current page contains text 'Cats Club'.</msg>
-<status status="PASS" starttime="20251203 14:31:44.189" endtime="20251203 14:31:44.209"/>
+<msg timestamp="20251203 14:48:15.442" level="INFO">Current page contains text 'Cats Club'.</msg>
+<status status="PASS" starttime="20251203 14:48:15.429" endtime="20251203 14:48:15.442"/>
 </kw>
-<status status="PASS" starttime="20251203 14:31:36.978" endtime="20251203 14:31:44.210"/>
+<status status="PASS" starttime="20251203 14:48:07.942" endtime="20251203 14:48:15.442"/>
 </kw>
-<kw name="When je clique sur l'onglet &quot;Connexion&quot;" library="squash_resources">
+<kw name="When je clique sur l'onglet &quot;Connexion&quot;" library="squash_resources_laure">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//a[@href='connection.html']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20251203 14:31:44.216" level="INFO">Clicking element 'xpath=//a[@href='connection.html']'.</msg>
-<status status="PASS" starttime="20251203 14:31:44.216" endtime="20251203 14:31:44.288"/>
+<msg timestamp="20251203 14:48:15.450" level="INFO">Clicking element 'xpath=//a[@href='connection.html']'.</msg>
+<status status="PASS" starttime="20251203 14:48:15.450" endtime="20251203 14:48:15.517"/>
 </kw>
-<status status="PASS" starttime="20251203 14:31:44.214" endtime="20251203 14:31:44.288"/>
+<status status="PASS" starttime="20251203 14:48:15.446" endtime="20251203 14:48:15.517"/>
 </kw>
-<kw name="And Je saisis la valeur &quot;login&quot; dans l'élément &quot;Login&quot;" library="squash_resources">
+<kw name="And Je saisis la valeur &quot;login&quot; dans l'élément &quot;Login&quot;" library="squash_resources_laure">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:loginInput</arg>
 <arg>login</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20251203 14:31:44.298" level="INFO">Typing text 'login' into text field 'id:loginInput'.</msg>
-<status status="PASS" starttime="20251203 14:31:44.296" endtime="20251203 14:31:44.348"/>
+<msg timestamp="20251203 14:48:15.525" level="INFO">Typing text 'login' into text field 'id:loginInput'.</msg>
+<status status="PASS" starttime="20251203 14:48:15.525" endtime="20251203 14:48:15.568"/>
 </kw>
-<status status="PASS" starttime="20251203 14:31:44.292" endtime="20251203 14:31:44.348"/>
+<status status="PASS" starttime="20251203 14:48:15.521" endtime="20251203 14:48:15.569"/>
 </kw>
-<kw name="And Je saisis la valeur &quot;pwd&quot; dans l'élément &quot;Mdp&quot;" library="squash_resources">
+<kw name="And Je saisis la valeur &quot;pwd&quot; dans l'élément &quot;Mdp&quot;" library="squash_resources_laure">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:passwordInput</arg>
 <arg>pwd</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20251203 14:31:44.354" level="INFO">Typing text 'pwd' into text field 'id:passwordInput'.</msg>
-<status status="PASS" starttime="20251203 14:31:44.354" endtime="20251203 14:31:44.368"/>
+<msg timestamp="20251203 14:48:15.571" level="INFO">Typing text 'pwd' into text field 'id:passwordInput'.</msg>
+<status status="PASS" starttime="20251203 14:48:15.571" endtime="20251203 14:48:15.590"/>
 </kw>
-<status status="PASS" starttime="20251203 14:31:44.351" endtime="20251203 14:31:44.368"/>
+<status status="PASS" starttime="20251203 14:48:15.571" endtime="20251203 14:48:15.590"/>
 </kw>
-<kw name="And Je clique sur le bouton Connexion" library="squash_resources">
+<kw name="And Je clique sur le bouton Connexion" library="squash_resources_laure">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id:connectionButton</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20251203 14:31:44.374" level="INFO">Clicking button 'id:connectionButton'.</msg>
-<status status="PASS" starttime="20251203 14:31:44.374" endtime="20251203 14:31:44.445"/>
+<msg timestamp="20251203 14:48:15.598" level="INFO">Clicking button 'id:connectionButton'.</msg>
+<status status="PASS" starttime="20251203 14:48:15.598" endtime="20251203 14:48:15.669"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20251203 14:31:46.448" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20251203 14:31:44.445" endtime="20251203 14:31:46.448"/>
+<msg timestamp="20251203 14:48:17.685" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20251203 14:48:15.669" endtime="20251203 14:48:17.685"/>
 </kw>
-<status status="PASS" starttime="20251203 14:31:44.371" endtime="20251203 14:31:46.448"/>
+<status status="PASS" starttime="20251203 14:48:15.595" endtime="20251203 14:48:17.685"/>
 </kw>
-<kw name="Then Un message d'erreur s'affiche : &quot;Identifiant et/ou mot de passe incorrect(s)&quot;" library="squash_resources">
+<kw name="Then Un message d'erreur s'affiche : &quot;Identifiant et/ou mot de passe incorrect(s)&quot;" library="squash_resources_laure">
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Identifiant et/ou mot de passe incorrect(s)</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20251203 14:31:46.498" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20251203 14:31:46.498" level="FAIL">Page should have contained text 'Identifiant et/ou mot de passe incorrect(s)' but did not.</msg>
-<status status="FAIL" starttime="20251203 14:31:46.457" endtime="20251203 14:31:46.504"/>
+<msg timestamp="20251203 14:48:17.726" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20251203 14:48:17.730" level="FAIL">Page should have contained text 'Identifiant et/ou mot de passe incorrect(s)' but did not.</msg>
+<status status="FAIL" starttime="20251203 14:48:17.692" endtime="20251203 14:48:17.734"/>
 </kw>
-<status status="FAIL" starttime="20251203 14:31:46.454" endtime="20251203 14:31:46.507"/>
+<status status="FAIL" starttime="20251203 14:48:17.689" endtime="20251203 14:48:17.734"/>
 </kw>
 <kw name="Test Teardown" type="TEARDOWN">
 <doc>test teardown
@@ -135,57 +96,57 @@ If both are defined, ${TEST_TEARDOWN} will be run after ${TEST_6_TEARDOWN}.</doc
 <var>${TEST_6_TEARDOWN_VALUE}</var>
 <arg>${TEST_6_TEARDOWN}</arg>
 <doc>Returns variable value or ``default`` if the variable does not exist.</doc>
-<msg timestamp="20251203 14:31:46.511" level="INFO">${TEST_6_TEARDOWN_VALUE} = None</msg>
-<status status="PASS" starttime="20251203 14:31:46.511" endtime="20251203 14:31:46.511"/>
+<msg timestamp="20251203 14:48:17.741" level="INFO">${TEST_6_TEARDOWN_VALUE} = None</msg>
+<status status="PASS" starttime="20251203 14:48:17.738" endtime="20251203 14:48:17.741"/>
 </kw>
 <kw name="Get Variable Value" library="BuiltIn">
 <var>${TEST_TEARDOWN_VALUE}</var>
 <arg>${TEST_TEARDOWN}</arg>
 <doc>Returns variable value or ``default`` if the variable does not exist.</doc>
-<msg timestamp="20251203 14:31:46.514" level="INFO">${TEST_TEARDOWN_VALUE} = None</msg>
-<status status="PASS" starttime="20251203 14:31:46.511" endtime="20251203 14:31:46.514"/>
+<msg timestamp="20251203 14:48:17.742" level="INFO">${TEST_TEARDOWN_VALUE} = None</msg>
+<status status="PASS" starttime="20251203 14:48:17.741" endtime="20251203 14:48:17.743"/>
 </kw>
 <if>
 <branch type="IF" condition="$TEST_6_TEARDOWN_VALUE is not None">
 <kw name="Run Keyword" library="BuiltIn">
 <arg>${TEST_6_TEARDOWN}</arg>
 <doc>Executes the given keyword with the given arguments.</doc>
-<status status="NOT RUN" starttime="20251203 14:31:46.514" endtime="20251203 14:31:46.514"/>
+<status status="NOT RUN" starttime="20251203 14:48:17.743" endtime="20251203 14:48:17.743"/>
 </kw>
-<status status="NOT RUN" starttime="20251203 14:31:46.514" endtime="20251203 14:31:46.514"/>
+<status status="NOT RUN" starttime="20251203 14:48:17.743" endtime="20251203 14:48:17.743"/>
 </branch>
-<status status="PASS" starttime="20251203 14:31:46.514" endtime="20251203 14:31:46.514"/>
+<status status="PASS" starttime="20251203 14:48:17.743" endtime="20251203 14:48:17.743"/>
 </if>
 <if>
 <branch type="IF" condition="$TEST_TEARDOWN_VALUE is not None">
 <kw name="Run Keyword" library="BuiltIn">
 <arg>${TEST_TEARDOWN}</arg>
 <doc>Executes the given keyword with the given arguments.</doc>
-<status status="NOT RUN" starttime="20251203 14:31:46.514" endtime="20251203 14:31:46.514"/>
+<status status="NOT RUN" starttime="20251203 14:48:17.743" endtime="20251203 14:48:17.743"/>
 </kw>
-<status status="NOT RUN" starttime="20251203 14:31:46.514" endtime="20251203 14:31:46.514"/>
+<status status="NOT RUN" starttime="20251203 14:48:17.743" endtime="20251203 14:48:17.743"/>
 </branch>
-<status status="PASS" starttime="20251203 14:31:46.514" endtime="20251203 14:31:46.514"/>
+<status status="PASS" starttime="20251203 14:48:17.743" endtime="20251203 14:48:17.743"/>
 </if>
-<status status="PASS" starttime="20251203 14:31:46.511" endtime="20251203 14:31:46.514"/>
+<status status="PASS" starttime="20251203 14:48:17.738" endtime="20251203 14:48:17.743"/>
 </kw>
 <doc>Connexion Cas Non Passant</doc>
-<status status="FAIL" starttime="20251203 14:31:36.978" endtime="20251203 14:31:46.514">Page should have contained text 'Identifiant et/ou mot de passe incorrect(s)' but did not.</status>
+<status status="FAIL" starttime="20251203 14:48:07.925" endtime="20251203 14:48:17.743">Page should have contained text 'Identifiant et/ou mot de passe incorrect(s)' but did not.</status>
 </test>
 <doc>Connexion Cas Non Passant</doc>
 <meta name="Automation priority">null</meta>
 <meta name="ID">6</meta>
 <meta name="Reference">02</meta>
 <meta name="Test case importance">Low</meta>
-<status status="FAIL" starttime="20251203 14:31:36.818" endtime="20251203 14:31:46.523"/>
+<status status="FAIL" starttime="20251203 14:48:07.784" endtime="20251203 14:48:17.751"/>
 </suite>
-<status status="FAIL" starttime="20251203 14:31:36.804" endtime="20251203 14:31:46.537"/>
+<status status="FAIL" starttime="20251203 14:48:07.781" endtime="20251203 14:48:17.759"/>
 </suite>
-<status status="FAIL" starttime="20251203 14:31:36.801" endtime="20251203 14:31:46.541"/>
+<status status="FAIL" starttime="20251203 14:48:07.771" endtime="20251203 14:48:17.763"/>
 </suite>
-<status status="FAIL" starttime="20251203 14:31:36.796" endtime="20251203 14:31:46.550"/>
+<status status="FAIL" starttime="20251203 14:48:07.767" endtime="20251203 14:48:17.772"/>
 </suite>
-<status status="FAIL" starttime="20251203 14:31:36.768" endtime="20251203 14:31:46.553"/>
+<status status="FAIL" starttime="20251203 14:48:07.725" endtime="20251203 14:48:17.776"/>
 </suite>
 <statistics>
 <total>
