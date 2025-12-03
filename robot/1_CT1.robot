@@ -4,7 +4,7 @@ Metadata         ID                           1
 Metadata         Reference                    1
 Metadata         Automation priority          null
 Metadata         Test case importance         Low
-Resource         squash_resources.resource
+Resource         squash_resources_JBL.resource
 Test Setup       Test Setup
 Test Teardown    Test Teardown
 
