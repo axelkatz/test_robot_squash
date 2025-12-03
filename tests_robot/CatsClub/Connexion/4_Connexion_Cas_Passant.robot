@@ -4,7 +4,7 @@ Metadata         ID                           4
 Metadata         Reference                    01
 Metadata         Automation priority          null
 Metadata         Test case importance         Low
-Resource         squash_resources.resource
+Resource         squash_resources_laure.resource
 #Test Setup       Test Setup
 Test Teardown    Close Browser
 

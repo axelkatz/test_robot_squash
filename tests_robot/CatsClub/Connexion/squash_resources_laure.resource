@@ -2,13 +2,14 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${url}        http://localhost:8080/index.html
+${url}        http://localhost:8080
 ${browser}    firefox
 
 *** Keywords ***
 
 Je suis sur la page de CatsClub
     Open Browser    ${url}    ${browser}
+    Maximize Browser Window
     Sleep    2
     Page Should Contain     Cats Club
 
