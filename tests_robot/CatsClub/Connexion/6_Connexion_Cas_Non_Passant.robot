@@ -5,8 +5,8 @@ Metadata         Reference                    02
 Metadata         Automation priority          null
 Metadata         Test case importance         Low
 Resource         squash_resources.resource
-#Test Setup       Test Setup
-Test Teardown    Close Browser
+Test Setup       Test Setup
+Test Teardown    Test Teardown
 
 
 *** Test Cases ***
