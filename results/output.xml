@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20251203 14:07:21.602" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Robot Squash" source="C:\Users\Formation\Documents\test_robot_squash">
+<suite id="s1-s1" name="Tests Robot" source="C:\Users\Formation\Documents\test_robot_squash\tests_robot">
+<suite id="s1-s1-s1" name="CatsClub" source="C:\Users\Formation\Documents\test_robot_squash\tests_robot\CatsClub">
+<suite id="s1-s1-s1-s1" name="Connexion" source="C:\Users\Formation\Documents\test_robot_squash\tests_robot\CatsClub\Connexion">
+<suite id="s1-s1-s1-s1-s1" name="5 Format du formulaire" source="C:\Users\Formation\Documents\test_robot_squash\tests_robot\CatsClub\Connexion\5_Format_du_formulaire.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Format du formulaire" line="13">
+<kw name="Given Je suis sur la page de CatsClub" library="squash_resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20251203 14:07:21.811" level="INFO">Opening browser 'firefox' to base url 'http://localhost:8080/index.html'.</msg>
+<msg timestamp="20251203 14:07:21.811" level="INFO">Firefox driver log is always forced to to: C:\Users\Formation\Documents\test_robot_squash\results\geckodriver-3.log</msg>
+<status status="PASS" starttime="20251203 14:07:21.811" endtime="20251203 14:07:27.009"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20251203 14:07:29.012" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20251203 14:07:27.009" endtime="20251203 14:07:29.013"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Cats Club</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20251203 14:07:29.021" level="INFO">Current page contains text 'Cats Club'.</msg>
+<status status="PASS" starttime="20251203 14:07:29.013" endtime="20251203 14:07:29.021"/>
+</kw>
+<status status="PASS" starttime="20251203 14:07:21.811" endtime="20251203 14:07:29.029"/>
+</kw>
+<kw name="When je clique sur l'onglet &quot;Connexion&quot;" library="squash_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@href='connection.html']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20251203 14:07:29.030" level="INFO">Clicking element 'xpath=//a[@href='connection.html']'.</msg>
+<status status="PASS" starttime="20251203 14:07:29.030" endtime="20251203 14:07:29.107"/>
+</kw>
+<status status="PASS" starttime="20251203 14:07:29.030" endtime="20251203 14:07:29.107"/>
+</kw>
+<kw name="Then L'input de login est présent" library="squash_resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Identifiant</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20251203 14:07:29.122" level="INFO">Current page contains text 'Identifiant'.</msg>
+<status status="PASS" starttime="20251203 14:07:29.113" endtime="20251203 14:07:29.122"/>
+</kw>
+<status status="PASS" starttime="20251203 14:07:29.113" endtime="20251203 14:07:29.123"/>
+</kw>
+<kw name="Then L'input de mot de passe est présent" library="squash_resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Mot de passe</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20251203 14:07:29.135" level="INFO">Current page contains text 'Mot de passe'.</msg>
+<status status="PASS" starttime="20251203 14:07:29.127" endtime="20251203 14:07:29.135"/>
+</kw>
+<status status="PASS" starttime="20251203 14:07:29.125" endtime="20251203 14:07:29.135"/>
+</kw>
+<kw name="Then le bouton de connexion est présent" library="squash_resources">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>id:connectionButton</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20251203 14:07:29.145" level="INFO">Current page contains input 'id:connectionButton'.</msg>
+<status status="PASS" starttime="20251203 14:07:29.139" endtime="20251203 14:07:29.146"/>
+</kw>
+<status status="PASS" starttime="20251203 14:07:29.139" endtime="20251203 14:07:29.147"/>
+</kw>
+<kw name="Then le bouton de mot de passe oublié est présent" library="squash_resources">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>xpath=//input[@value='Mot de passe oublié']</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20251203 14:07:29.155" level="INFO">Current page contains input 'xpath=//input[@value='Mot de passe oublié']'.</msg>
+<status status="PASS" starttime="20251203 14:07:29.152" endtime="20251203 14:07:29.155"/>
+</kw>
+<status status="PASS" starttime="20251203 14:07:29.148" endtime="20251203 14:07:29.156"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20251203 14:07:29.158" endtime="20251203 14:07:29.896"/>
+</kw>
+<doc>Format du formulaire</doc>
+<status status="PASS" starttime="20251203 14:07:21.811" endtime="20251203 14:07:29.896"/>
+</test>
+<doc>Format du formulaire</doc>
+<meta name="Automation priority">null</meta>
+<meta name="ID">5</meta>
+<meta name="Reference">03</meta>
+<meta name="Test case importance">Low</meta>
+<status status="PASS" starttime="20251203 14:07:21.666" endtime="20251203 14:07:29.896"/>
+</suite>
+<status status="PASS" starttime="20251203 14:07:21.666" endtime="20251203 14:07:29.907"/>
+</suite>
+<status status="PASS" starttime="20251203 14:07:21.657" endtime="20251203 14:07:29.911"/>
+</suite>
+<status status="PASS" starttime="20251203 14:07:21.653" endtime="20251203 14:07:29.919"/>
+</suite>
+<status status="PASS" starttime="20251203 14:07:21.613" endtime="20251203 14:07:29.922"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Robot Squash">Test Robot Squash</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests Robot">Test Robot Squash.Tests Robot</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="CatsClub">Test Robot Squash.Tests Robot.CatsClub</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Connexion">Test Robot Squash.Tests Robot.CatsClub.Connexion</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="5 Format du formulaire">Test Robot Squash.Tests Robot.CatsClub.Connexion.5 Format du formulaire</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
