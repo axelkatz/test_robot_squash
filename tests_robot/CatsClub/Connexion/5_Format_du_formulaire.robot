@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Format du formulaire
 Metadata         ID                           5
-Metadata         Reference                    02
+Metadata         Reference                    03
 Metadata         Automation priority          null
 Metadata         Test case importance         Low
 Resource         squash_resources.resource

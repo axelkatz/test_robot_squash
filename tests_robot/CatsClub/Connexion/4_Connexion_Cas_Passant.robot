@@ -1,27 +1,24 @@
 *** Settings ***
-Documentation    Connexion
+Documentation    Connexion Cas Passant
 Metadata         ID                           4
 Metadata         Reference                    01
 Metadata         Automation priority          null
 Metadata         Test case importance         Low
 Resource         squash_resources.resource
-Library          squash_tf.TFParamService
 Test Setup       Test Setup
 Test Teardown    Test Teardown
 
 
 *** Test Cases ***
-Connexion
-    [Documentation]    Connexion
-
-    &{dataset} =    Retrieve Dataset
+Connexion Cas Passant
+    [Documentation]    Connexion Cas Passant
 
     Given Je suis sur la page de CatsClub
     When je clique sur l'onglet "Connexion"
-    And Je saisis la valeur "${dataset}[login]" dans l'élément "Login"
-    And Je saisis la valeur "${dataset}[pwd]" dans l'élément "Mdp"
+    And Je saisis la valeur "a" dans l'élément "Login"
+    And Je saisis la valeur "a" dans l'élément "Mdp"
     And Je clique sur le bouton Connexion
-    Then Le resultat est : "${dataset}[resultat]"
+    Then Je suis connecté en tant que "Enrico Pallazzo"
 
 
 *** Keywords ***
@@ -54,25 +51,3 @@ Test Teardown
     IF    $TEST_TEARDOWN_VALUE is not None
         Run Keyword    ${TEST_TEARDOWN}
     END
-
-Retrieve Dataset
-    [Documentation]    Retrieves Squash TM's datasets and stores them in a dictionary.
-    ...
-    ...                For instance, datasets containing 3 parameters "city", "country" and "currency"
-    ...                have been defined in Squash TM.
-    ...
-    ...                First, this keyword retrieves parameter values from Squash TM
-    ...                and stores them into variables, using the keyword 'Get Test Param':
-    ...                ${city} =    Get Test Param    DS_city
-    ...
-    ...                Then, this keyword stores the parameters into the &{dataset} dictionary
-    ...                with each parameter name as key, and each parameter value as value:
-    ...                &{dataset} =    Create Dictionary    city=${city}    country=${country}    currency=${currency}
-
-    ${login} =       Get Test Param    DS_login
-    ${pwd} =         Get Test Param    DS_pwd
-    ${resultat} =    Get Test Param    DS_resultat
-
-    &{dataset} =    Create Dictionary    login=${login}    pwd=${pwd}    resultat=${resultat}
-
-    RETURN    &{dataset}
