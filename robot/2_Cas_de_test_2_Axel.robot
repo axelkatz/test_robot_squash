@@ -3,7 +3,7 @@ Documentation    Cas de test 2 Axel
 Metadata         ID                           2
 Metadata         Automation priority          null
 Metadata         Test case importance         Low
-Resource         squash_resources.resource
+Resource         squash_resources_axel.resource
 Library          squash_tf.TFParamService
 Test Setup       Test Setup
 Test Teardown    Test Teardown
