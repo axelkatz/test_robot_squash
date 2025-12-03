@@ -5,8 +5,8 @@ Metadata         Reference                    02
 Metadata         Automation priority          null
 Metadata         Test case importance         Low
 Resource         squash_resources.resource
-Test Setup       Test Setup
-Test Teardown    Test Teardown
+#Test Setup       Test Setup
+Test Teardown    Close Browser
 
 
 *** Test Cases ***
@@ -20,6 +20,7 @@ Connexion Cas Non Passant
     And Je clique sur le bouton Connexion
     Then Un message d'erreur s'affiche : "Identifiant et/ou mot de passe incorrect(s)"
 
+    [Teardown]    Test Teardown
 
 *** Keywords ***
 Test Setup
